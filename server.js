@@ -10,6 +10,8 @@ PORT = 4000;
 const memes = require('./models/Meme');
 
 //middleware//
+//express static to find public folder/static css
+app.use(express.static('public'));
 //application view engine to render ejs
 app.set('view engine', 'ejs');
 
