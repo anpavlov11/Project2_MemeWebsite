@@ -62,4 +62,13 @@ Different elements in meme discussion show page
 - posts with memes and edit/delete buttons
 
 Meme Schema wireframe:
+
 ![meme_schema_wireframe text](./imagesWireframe/meme_schema_wireframe.png)
+
+Different elements of meme schema wireframe
+- title of meme
+- topic of meme
+- meme image 
+- description of meme (content)
+- comments (the many)
+- the relationship is 1 meme to many comments
