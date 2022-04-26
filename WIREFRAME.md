@@ -13,8 +13,10 @@ Categories (for now)
 Other options:
 1) PG13 memes vs R rated memes
 2) Suggesting memes
-3) discussion page memes
+3) discussion page for memes
 
-Home Page
+Home Page: 
+
+
 
 
