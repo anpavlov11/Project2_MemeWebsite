@@ -17,6 +17,6 @@ Other options:
 
 Home Page: 
 
-
+![homepage_wireframe text](./imagesWireframe/homepage_wireframe.png)
 
 
