@@ -44,4 +44,10 @@ discussion homepage wireframe: (stretch)
 
 ![discussion_homepage_wireframe text](./imagesWireframe/discussion_homepage_wireframe.png)
 
+Different elements in discussion home page
+- back to home button
+- new discussion button
+- list of discussions to show pages of discussions
+- click on discussions to see show page of each discussion
+
 
