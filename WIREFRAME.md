@@ -26,4 +26,16 @@ Different elements in home page
 - Submit New Meme Button: goes to new ejs page
 - Can click on new meme feed items to get to their show pages
 
+Meme Show Page Wireframe:
+
+![meme_showpage_wireframe text](./imagesWireframe/meme_showpage_wireframe.png)
+
+Different elements in meme show page
+- back to home goes to the index page
+- discussion groups button goes to discussion group page
+- edit meme button goes to the edit page
+- the meme has a title, category, the meme img, and description
+- there is a like % and dislike % 
+- there is a most recent comment feed
+- there is a see all comments button that goes to a see all comments page
 
