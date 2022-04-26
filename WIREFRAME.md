@@ -50,4 +50,6 @@ Different elements in discussion home page
 - list of discussions to show pages of discussions
 - click on discussions to see show page of each discussion
 
+discussion show page wireframe:
 
+![memeDiscussion_show_wireframe text](./imagesWireframe/memeDiscussion_show_wireframe.png)
