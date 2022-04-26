@@ -39,3 +39,9 @@ Different elements in meme show page
 - there is a most recent comment feed
 - there is a see all comments button that goes to a see all comments page
 
+discussion homepage wireframe: (stretch)
+- blogs about memes with custom topics and memes
+
+![discussion_homepage_wireframe text](./imagesWireframe/discussion_homepage_wireframe.png)
+
+
