@@ -1,3 +1,10 @@
+/* Meme home body style */
 body {
     background-color: lightblue;
+}
+
+/* Meme image style */
+.homeImage{
+    height: 300px;
+    width: 300px;
 }
