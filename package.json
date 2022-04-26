@@ -1,0 +1,24 @@
+{
+  "name": "mainrepo_project2_memewebsite",
+  "version": "1.0.0",
+  "description": "Meme Website with Amber and Andrew",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewRBader/Project2_MemeWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewRBader/Project2_MemeWebsite/issues"
+  },
+  "homepage": "https://github.com/AndrewRBader/Project2_MemeWebsite#readme",
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
