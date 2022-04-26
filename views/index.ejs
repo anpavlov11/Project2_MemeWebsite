@@ -8,5 +8,14 @@
 </head>
 <body>
     <h1>Meme Home Page</h1>
+    <div>
+        <% for(let i = 0; i < memes.length; i++){ %>
+            <div>
+                <a href="/<%= i %>"><%=memes[i].title%></a></br>
+                <img src="<%=memes[i].image%>" alt="<%=memes[i].title%>"/>
+                <p><%=memes[i].description%></p>
+            </div>
+        <% } %>
+    </div>
 </body>
 </html>
