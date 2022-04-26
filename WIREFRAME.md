@@ -19,4 +19,11 @@ Home Page:
 
 ![homepage_wireframe text](./imagesWireframe/homepage_wireframe.png)
 
+Different elements in home page
+- Choose Meme Category button: choose from one of the categories above
+- Choose discussion groups that discuss the hottest memes
+- Shows most recently posted memes
+- Submit New Meme Button: goes to new ejs page
+- Can click on new meme feed items to get to their show pages
+
 
