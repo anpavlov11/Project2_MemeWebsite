@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/AndrewRBader/Project2_MemeWebsite#readme",
   "dependencies": {
+    "ejs": "^3.1.7",
     "express": "^4.18.0"
   }
 }
