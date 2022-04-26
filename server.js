@@ -9,6 +9,10 @@ PORT = 4000;
 // test Meme model to get initial routes working
 const memes = require('./models/Meme');
 
+//middleware//
+//application view engine to render ejs
+app.set('view engine', 'ejs');
+
 //routes//
 // show get route
 app.get('/:id', (req, res) =>{
@@ -18,7 +22,7 @@ app.get('/:id', (req, res) =>{
 
 // home get route
 app.get('/', (req, res) => {
-    res.send('Welcome to We Meme It');
+    res.render('index.ejs');
 });
 
 
