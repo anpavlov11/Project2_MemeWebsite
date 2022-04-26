@@ -60,3 +60,6 @@ Different elements in meme discussion show page
 - create newe discussion post page
 - Discussion Title
 - posts with memes and edit/delete buttons
+
+Meme Schema wireframe:
+![meme_schema_wireframe text](./imagesWireframe/meme_schema_wireframe.png)
