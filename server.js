@@ -22,7 +22,8 @@ app.get('/:id', (req, res) =>{
 
 // home get route
 app.get('/', (req, res) => {
-    res.render('index.ejs');
+    const context = {memes:memes};
+    res.render('index.ejs', context);
 });
 
 
