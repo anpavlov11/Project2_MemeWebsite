@@ -38,7 +38,8 @@ app.get('/', (req, res) => {
 
 // "create" post route
 app.post('/', (req,res) => {
-    res.send(req.body);
+    memes.push (req.body);
+    res.redirect('/');
 });
 
 
