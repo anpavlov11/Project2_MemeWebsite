@@ -30,9 +30,16 @@ router.get('/:id/edit', (req,res) => {
 });
 
 // meme index route -> http://localhost:4000/meme/
-router.get('/', (req, res) => {
-    const context = {memes:memes};
-    res.render('index.ejs', context);
+router.get('/', async (req, res, next) => {
+    try {
+        const memes = await db.Meme.find({});
+        const context = {memes};
+        return res.render('index.ejs', context);
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 });
 
 // "create" post route -> http://localhost:4000/meme/
