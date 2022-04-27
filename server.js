@@ -8,6 +8,8 @@ const app = express();
 const methodOverride = require('method-override');
 // import meme_controller
 const memeController = require('./controllers/meme_controller.js');
+// require mongo db connection 
+require('./config/db.connection');
 // set up port variable
 PORT = 4000;
 
