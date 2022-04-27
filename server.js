@@ -37,8 +37,8 @@ app.get('/', (req, res) => {
 });
 
 // "create" post route
-app.post('/meme', (req,res) => {
-    res.send('hitting new post route')
+app.post('/', (req,res) => {
+    res.send(req.body);
 });
 
 
