@@ -14,14 +14,8 @@ const memes = require('./models/Meme');
 //middleware//
 //express static to find public folder/static css
 app.use(express.static('public'));
-<<<<<<< HEAD
-
-// app.use(methodOverride('_method'));
-app.use(express.urlencoded({extended: false}));
-=======
 // body parser middleware
 app.use(express.urlencoded({extended:false}));
->>>>>>> 9bbf9f1000eae815b2ebb4228a8121a92b9db96f
 //application view engine to render ejs
 app.set('view engine', 'ejs');
 
