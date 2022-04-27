@@ -14,7 +14,7 @@ PORT = 4000;
 /////////////////////// MODELS //////////////////////////
 
 // test Meme model to get initial routes working
-const memes = require('./models/Meme');
+const memes = require('./models/meme_model');
 
 ///////////////////MIDDLEWARE////////////////////////////
 
