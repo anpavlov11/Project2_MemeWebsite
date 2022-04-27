@@ -33,7 +33,7 @@ app.set('view engine', 'ejs');
 
 // home get route
 app.get('/', (req, res) => {
-    res.send('Welcome to we meme it homepage');
+    res.render('home.ejs');
 });
 
 
@@ -42,4 +42,3 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`listening on port: ${PORT}`);
 });
-
