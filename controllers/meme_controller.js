@@ -5,10 +5,22 @@ const router = express.Router();
 
 /////////////////////// MODELS //////////////////////////
 
-const memes = require('../models/Meme')
+const db = require('../Models/index.js')
 
 
 /////////////////////// ROUTES //////////////////////////
+// meme index route -> http://localhost:4000/meme/
+router.get('/', async (req, res, next) => {
+    try {
+        const memes = await db.Meme.find({});
+        const context = {memes};
+        return res.render('index.ejs', context);
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+});
 
 // new get route -> http://localhost:4000/meme/new
 router.get('/new', (req, res) => {
@@ -27,19 +39,6 @@ router.get('/:id/edit', (req,res) => {
     const editMeme = memes[req.params.id];
     const context = {editMeme: editMeme, id: req.params.id};
     res.render('edit.ejs', context);
-});
-
-// meme index route -> http://localhost:4000/meme/
-router.get('/', async (req, res, next) => {
-    try {
-        const memes = await db.Meme.find({});
-        const context = {memes};
-        return res.render('index.ejs', context);
-    } catch (error) {
-        console.log(error);
-        req.error = error;
-        return next();
-    }
 });
 
 // "create" post route -> http://localhost:4000/meme/
