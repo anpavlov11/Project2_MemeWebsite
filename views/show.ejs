@@ -3,10 +3,9 @@
     <!-- include partial head.ejs here -->
     <%- include('partials/head.ejs') %>
 <body>
+    <!-- navigation -->
+    <%- include('partials/nav.ejs') %>
     <h1>Meme Show Page</h1>
-    <nav class="home">
-        <a href = "/meme/">Back to Meme Index</a>
-    </nav>
     <div>
         <a href="/meme/<%=id%>/edit"> Edit <%= oneMeme.title %></a>
     </div>
