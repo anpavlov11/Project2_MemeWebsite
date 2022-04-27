@@ -12,6 +12,8 @@ const memes = require('./models/Meme');
 //middleware//
 //express static to find public folder/static css
 app.use(express.static('public'));
+// body parser middleware
+app.use(express.urlencoded({extended:false}));
 //application view engine to render ejs
 app.set('view engine', 'ejs');
 
@@ -28,6 +30,11 @@ app.get('/', (req, res) => {
     const context = {memes:memes};
     res.render('index.ejs', context);
 });
+
+// "create" post route
+app.post('/meme', (req,res) => {
+    res.send('hitting new post route')
+})
 
 
 // app.listen to server at given port
