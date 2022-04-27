@@ -20,7 +20,7 @@ app.set('view engine', 'ejs');
 //routes//
 // new get route
 app.get('/meme/new', (req, res) => {
-    res.send('hitting new route');
+    res.render('new.ejs');
 });
 
 // show get route
