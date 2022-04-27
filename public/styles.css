@@ -3,8 +3,14 @@ body {
     background-color: lightblue;
 }
 
-/* Meme image style */
+/* home meme image style */
 .homeImage{
     height: 300px;
     width: 300px;
+}
+
+/* show meme image style */
+.showImage{
+    height: 500px;
+    width: 500px;
 }
