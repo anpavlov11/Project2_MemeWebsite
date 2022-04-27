@@ -18,12 +18,17 @@ app.use(express.urlencoded({extended:false}));
 app.set('view engine', 'ejs');
 
 //routes//
+// new get route
+app.get('/meme/new', (req, res) => {
+    res.send('hitting new route');
+});
+
 // show get route
 app.get('/meme/:id', (req, res) =>{
     const memeId = req.params.id;
     const context = {oneMeme: memes[memeId]}
     res.render('show.ejs', context);
-})
+});
 
 // home get route
 app.get('/', (req, res) => {
@@ -34,7 +39,7 @@ app.get('/', (req, res) => {
 // "create" post route
 app.post('/meme', (req,res) => {
     res.send('hitting new post route')
-})
+});
 
 
 // app.listen to server at given port
