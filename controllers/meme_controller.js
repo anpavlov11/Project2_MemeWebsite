@@ -5,7 +5,7 @@ const router = express.Router();
 
 /////////////////////// MODELS //////////////////////////
 
-const memes = require('../models/meme_model.js')
+const memes = require('../models/Meme')
 
 
 /////////////////////// ROUTES //////////////////////////

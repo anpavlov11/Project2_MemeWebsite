@@ -21,7 +21,9 @@ const memeSchema = new mongoose.Schema({
     description: {
         type: String,
         required: [true, 'please input description of the meme']
-    },
+    }
+},
+{
     timestamps: true
 });
 
