@@ -4,5 +4,20 @@
     <%- include('partials/head.ejs') %>
 <body>
     <h1>New Meme Page</h1>
+    <form>
+        <div>
+            <label for = "title">Meme Title: </label>
+            <input name = "title" type = "text"/>
+        </div>
+        <div>
+            <label for = "image">Meme Image(url): </label>
+            <input name = "image" type = "text"/>
+        </div>
+        <div>
+            <label for = "description">Meme Description: </label>
+            <input name = "description" type = "text"/>
+        </div>
+        <input type = "submit" value = "Submit New Meme" />
+    </form>
 </body>
 </html>
