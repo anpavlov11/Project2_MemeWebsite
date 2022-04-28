@@ -9,7 +9,7 @@
     <div>
         <% for(let i = 0; i < memes.length; i++){ %>
             <div>
-                <a href="/meme/<%= meme[i]._id %>"><%=memes[i].title%></a></br>
+                <a href="/meme/<%= memes[i]._id %>"><%=memes[i].title%></a></br>
                 <img class = "homeImage" src="<%=memes[i].image%>" alt="<%=memes[i].title%>"/>
                 <p><%=memes[i].description%></p>
                 <div>
