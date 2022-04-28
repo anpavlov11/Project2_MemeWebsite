@@ -13,11 +13,6 @@ require('./config/db.connection');
 // set up port variable
 PORT = 4000;
 
-/////////////////////// MODELS //////////////////////////
-
-// test Meme model to get initial routes working
-// const memes = require('./models/meme_model');
-
 ///////////////////MIDDLEWARE////////////////////////////
 
 //express static to find public folder/static css
