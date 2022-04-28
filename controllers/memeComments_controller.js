@@ -17,7 +17,7 @@ const db = require('../Models/');
 router.get('/', async(req, res, next) => {
     try{
         const allMemeComments = await db.MemeComment.find({});
-        res.send(allMemeComments);
+        return res.send(allMemeComments);
     }
     catch (error){
         console.log(error);
@@ -57,22 +57,30 @@ router.post('/', async(req, res, next) => {
 
 // Show route -GET- route for comments ERD, serves show.ejs template
 router.get('/:memeId', async(req, res, next) => {
-    return res.render('memeComments/show.ejs');
+    try{
+        const foundMemeComment = await db.MemeComment.findById(req.params.memeId).populate('meme');
+        res.send(foundMemeComment);
+    }
+    catch (error){
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 });
 
 // Update route -PUT- route for comments ERD
 router.put('/:memeId', async(req, res, next) => {
-    res.send('hitting meme comment update: ' +req.params.memeId);
+    return res.send('hitting meme comment update: ' +req.params.memeId);
 });
 
 // Edit route -GET- route for comments ERD, serves edit.ejs template
 router.get('/:memeId/edit', async(req, res, next) => {
-    res.send('hitting meme comment edit: ' +req.params.memeId);
+    return res.send('hitting meme comment edit: ' +req.params.memeId);
 });
 
 // Destroy route -DELETE- route for comments
 router.delete('/:memeId', async(req, res, next) => {
-    res.send('hitting meme comment delete: ' +req.params.memeId);
+    return res.send('hitting meme comment delete: ' +req.params.memeId);
 });
 
 
