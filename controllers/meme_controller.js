@@ -5,7 +5,7 @@ const router = express.Router();
 
 /////////////////////// MODELS //////////////////////////
 
-const db = require('../Models/index.js')
+const db = require('../Models/')
 
 
 /////////////////////// ROUTES //////////////////////////

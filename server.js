@@ -13,11 +13,6 @@ require('./config/db.connection');
 // set up port variable
 PORT = 4000;
 
-/////////////////////// MODELS //////////////////////////
-
-// test Meme model to get initial routes working
-// const memes = require('./models/meme_model');
-
 ///////////////////MIDDLEWARE////////////////////////////
 
 //express static to find public folder/static css
@@ -33,6 +28,7 @@ app.set('view engine', 'ejs');
 
 // meme controller middleware
 app.use('/meme/', controllers.memes);
+app.use('/comments/', controllers.memeComments);
 
 /////////////////////// ROUTES //////////////////////////
 
