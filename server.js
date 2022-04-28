@@ -28,6 +28,7 @@ app.set('view engine', 'ejs');
 
 // meme controller middleware
 app.use('/meme/', controllers.memes);
+app.use('/comments/', controllers.memeComments);
 
 /////////////////////// ROUTES //////////////////////////
 
