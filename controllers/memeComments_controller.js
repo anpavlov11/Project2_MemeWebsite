@@ -14,18 +14,39 @@ const db = require('../models/index.js');
 ////////////////////////// ROUTES ///////////////////////////////
 
 // Index -GET- route for comments ERD, serves index.ejs template
+router.get('/', async(req, res, next) => {
+    res.send('hitting meme comment index');
+});
 
 // New -GET- route for comments ERD, serves new.ejs template
+router.get('/new', async(req, res, next) => {
+    res.send('hitting meme comment new');
+});
 
 // Create -POST- route for comments ERD
+router.post('/', async(req, res, next) => {
+    res.send('hitting meme comment create');
+});
 
 // Show route -GET- route for comments ERD, serves show.ejs template
+router.get('/:memeId', async(req, res, next) => {
+    res.send('hitting meme comment show ' +req.params.memeId);
+});
 
 // Update route -PUT- route for comments ERD
+router.put('/:memeId', async(req, res, next) => {
+    res.send('hitting meme comment update: ' +req.params.memeId);
+});
 
 // Edit route -GET- route for comments ERD, serves edit.ejs template
+router.get('/:memeId/edit', async(req, res, next) => {
+    res.send('hitting meme comment edit: ' +req.params.memeId);
+});
 
 // Destroy route -DELETE- route for comments
+router.delete('/:memeId', async(req, res, next) => {
+    res.send('hitting meme comment delete: ' +req.params.memeId);
+});
 
 
 // exports the router
