@@ -7,7 +7,7 @@ const app = express();
 // require method override library
 const methodOverride = require('method-override');
 // import meme_controller
-const memeController = require('./controllers/meme_controller.js');
+const controllers = require('./controllers/');
 // require mongo db connection 
 require('./config/db.connection');
 // set up port variable
@@ -16,7 +16,7 @@ PORT = 4000;
 /////////////////////// MODELS //////////////////////////
 
 // test Meme model to get initial routes working
-const memes = require('./models/meme_model');
+// const memes = require('./models/meme_model');
 
 ///////////////////MIDDLEWARE////////////////////////////
 
@@ -26,10 +26,13 @@ app.use(express.static('public'));
 app.use(methodOverride('_method'));
 // body parser middleware
 app.use(express.urlencoded({extended:false}));
-// meme controller middleware
-app.use('/meme/', memeController);
 //application view engine to render ejs
 app.set('view engine', 'ejs');
+
+/////////////////////// CONTROLLERS ////////////////////////
+
+// meme controller middleware
+app.use('/meme/', controllers.memes);
 
 /////////////////////// ROUTES //////////////////////////
 
@@ -44,3 +47,4 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`listening on port: ${PORT}`);
 });
+
