@@ -28,10 +28,17 @@ router.get('/new', (req, res) => {
 });
 
 // show get route -> http://localhost:4000/meme/:id
-router.get('/:id', (req, res) =>{
-    const memeId = req.params.id;
-    const context = {oneMeme: memes[memeId], id: req.params.id};
-    res.render('show.ejs', context);
+router.get('/:id', async (req, res, next) =>{
+    try{
+        const foundMeme = await db.Meme.findById(req.params.id);
+        console.log(foundMeme);
+        const context = {oneMeme: foundMeme};
+        res.render('show.ejs', context );
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 });
 
 // edit get route -> http://localhost:4000/meme/:id/edit

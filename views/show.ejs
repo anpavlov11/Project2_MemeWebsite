@@ -7,7 +7,7 @@
     <%- include('partials/nav.ejs') %>
     <h1>Meme Show Page</h1>
     <div>
-        <a href="/meme/<%=id%>/edit"> Edit <%= oneMeme.title %></a>
+        <a href="/meme/<%=oneMeme._id%>/edit"> Edit <%= oneMeme.title %></a>
     </div>
     <h2><%= oneMeme.title %></h2>
     <img class = 'showImage' src = '<%=oneMeme.image%>' alt = '<%=oneMeme.title%>'/>
