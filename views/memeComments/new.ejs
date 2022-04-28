@@ -6,15 +6,24 @@
     <!-- navigation -->
     <%- include('../partials/nav.ejs') %>
     <h1>New Meme Comment Page</h1>
-    <form>
-        <input type = "number" name = "rating" />
-        <input type = "string" name = "content" />
-        <!-- select meme to comment on -->
-        <select name = "meme">
-            <option value = "1">Test Value 1</option>
-            <option value = "2">Test Value 2</option>
-            <option value = "3">Test Value 3</option>
-        </select>
+    <form action = "/comments/" method = "POST">
+        <label>
+            Rating (Number 1-5, 5 being the best): 
+            <input type = "number" name = "rating" />
+        </label><br/>
+        <label>
+            Meme Comment:
+            <input type = "string" name = "content" />
+        </label><br/>
+        <label>
+            Choose Meme to Comment on:
+            <select name = "meme">
+                <option value = "1">Test Value 1</option>
+                <option value = "2">Test Value 2</option>
+                <option value = "3">Test Value 3</option>
+            </select>
+        </label><br/>
+        <input type = "submit" value = "Create Meme Comment" />
     </form>
 </body>
 </html>
