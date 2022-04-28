@@ -13,7 +13,7 @@
                 <img class = "homeImage" src="<%=memes[i].image%>" alt="<%=memes[i].title%>"/>
                 <p><%=memes[i].description%></p>
                 <div>
-                    <form method="POST" action="/meme/<%= i %>?_method=Delete">
+                    <form method="POST" action="/meme/<%= memes[i]._id %>?_method=Delete">
                         <input type="submit" value = "Delete Meme" />
                     </form>
                 </div>
