@@ -31,7 +31,6 @@ router.get('/new', (req, res) => {
 router.get('/:id', async (req, res, next) =>{
     try{
         const foundMeme = await db.Meme.findById(req.params.id);
-        console.log(foundMeme);
         const context = {oneMeme: foundMeme};
         res.render('show.ejs', context );
     } catch (error) {
@@ -45,7 +44,6 @@ router.get('/:id', async (req, res, next) =>{
 router.get('/:id/edit', async (req,res, next) => {
     try{
         const editMeme = await db.Meme.findById(req.params.id);
-        console.log(editMeme);
         const context =  {
             editMeme: editMeme
         }
@@ -61,9 +59,7 @@ router.get('/:id/edit', async (req,res, next) => {
 // "create" post route -> http://localhost:4000/meme/
 router.post('/', async (req,res, next) => {
     try {
-        console.log(req.body);
         const createdMeme = await db.Meme.create(req.body);
-        console.log(`created meme: ${createdMeme}`);
         res.redirect('/meme/');
     } catch (error) {
         console.log(error);
@@ -76,7 +72,6 @@ router.post('/', async (req,res, next) => {
 router.delete('/:id', async (req,res, next) => {
     try{
         const deletedMeme = await db.Meme.findByIdAndDelete(req.params.id);
-        console.log(deletedMeme);
         res.redirect('/meme/');
     }
     catch (error) {
@@ -90,7 +85,6 @@ router.delete('/:id', async (req,res, next) => {
 router.put('/:id', async (req, res, next) => {
     try {
         const updatedMeme = await db.Meme.findByIdAndUpdate(req.params.id, req.body);
-        console.log(updatedMeme);
         return res.redirect(`/meme/${updatedMeme._id}`);
     }
     catch (error){
