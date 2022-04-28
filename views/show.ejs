@@ -16,7 +16,8 @@
         <h2>Meme Comments</h2>
         <% for (let i = 0; i<memeComments.length; i++) { %>
             <div>
-                <h3>Testing</h3>
+                <h3>Rating: <%= memeComments[i].rating %></h3>
+                <p><%= memeComments[i].content %></p>
             </div>
         <% } %>
     </section>
