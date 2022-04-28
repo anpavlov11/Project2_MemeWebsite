@@ -42,10 +42,20 @@ router.get('/:id', async (req, res, next) =>{
 });
 
 // edit get route -> http://localhost:4000/meme/:id/edit
-router.get('/:id/edit', (req,res) => {
-    const editMeme = memes[req.params.id];
-    const context = {editMeme: editMeme, id: req.params.id};
-    res.render('edit.ejs', context);
+router.get('/:id/edit', async (req,res, next) => {
+    try{
+        const editMeme = await db.Meme.findById(req.params.id);
+        console.log(editMeme);
+        const context =  {
+            editMeme: editMeme
+        }
+        return res.render('edit.ejs', context);
+    }
+    catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 });
 
 // "create" post route -> http://localhost:4000/meme/

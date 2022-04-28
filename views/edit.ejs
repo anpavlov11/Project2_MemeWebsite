@@ -6,7 +6,7 @@
      <!-- navigation -->
      <%- include('partials/nav.ejs') %>
     <h1>Edit Meme Page</h1>
-    <form method = "POST" action = "/meme/<%= id %>?_method=PUT">
+    <form method = "POST" action = "/meme/<%= editMeme._id %>?_method=PUT">
         <div>
             <label for = "title">Meme Title: </label>
             <input name = "title" type = "text" value = "<%=editMeme.title%>" />
