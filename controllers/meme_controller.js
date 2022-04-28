@@ -87,9 +87,17 @@ router.delete('/:id', async (req,res, next) => {
 });
 
 // update put route -> http://localhost:4000/meme/:id
-router.put('/:id', (req, res) => {
-    memes[req.params.id] = req.body;
-    res.redirect(`/meme/${req.params.id}`);
+router.put('/:id', async (req, res, next) => {
+    try {
+        const updatedMeme = await db.Meme.findByIdAndUpdate(req.params.id, req.body);
+        console.log(updatedMeme);
+        return res.redirect(`/meme/${updatedMeme._id}`);
+    }
+    catch (error){
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 });
 
 
