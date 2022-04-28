@@ -26,10 +26,13 @@ app.use(express.static('public'));
 app.use(methodOverride('_method'));
 // body parser middleware
 app.use(express.urlencoded({extended:false}));
-// meme controller middleware
-app.use('/meme/', memeController);
 //application view engine to render ejs
 app.set('view engine', 'ejs');
+
+/////////////////////// CONTROLLERS ////////////////////////
+
+// meme controller middleware
+app.use('/meme/', memeController);
 
 /////////////////////// ROUTES //////////////////////////
 
@@ -44,3 +47,4 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`listening on port: ${PORT}`);
 });
+
