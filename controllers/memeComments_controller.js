@@ -20,7 +20,7 @@ router.get('/', async(req, res, next) => {
 
 // New -GET- route for comments ERD, serves new.ejs template
 router.get('/new', async(req, res, next) => {
-    res.send('hitting meme comment new');
+    res.render('memeComments/new.ejs');
 });
 
 // Create -POST- route for comments ERD
