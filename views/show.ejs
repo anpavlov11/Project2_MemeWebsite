@@ -12,5 +12,13 @@
     <h2><%= oneMeme.title %></h2>
     <img class = 'showImage' src = '<%=oneMeme.image%>' alt = '<%=oneMeme.title%>'/>
     <p><%= oneMeme.description %></p>
+    <section>
+        <h2>Meme Comments</h2>
+        <% for (let i = 0; i<memeComments.length; i++) { %>
+            <div>
+                <h3>Testing</h3>
+            </div>
+        <% } %>
+    </section>
 </body>
 </html>
