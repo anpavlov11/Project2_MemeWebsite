@@ -24,7 +24,7 @@ router.get('/', async (req, res, next) => {
 
 // new get route -> http://localhost:4000/meme/new
 router.get('/new', (req, res) => {
-    res.render('new.ejs');
+    return res.render('new.ejs');
 });
 
 // show get route -> http://localhost:4000/meme/:id
@@ -32,7 +32,7 @@ router.get('/:id', async (req, res, next) =>{
     try{
         const foundMeme = await db.Meme.findById(req.params.id);
         const context = {oneMeme: foundMeme};
-        res.render('show.ejs', context );
+        return res.render('show.ejs', context );
     } catch (error) {
         console.log(error);
         req.error = error;
@@ -60,7 +60,7 @@ router.get('/:id/edit', async (req,res, next) => {
 router.post('/', async (req,res, next) => {
     try {
         const createdMeme = await db.Meme.create(req.body);
-        res.redirect('/meme/');
+        return res.redirect('/meme/');
     } catch (error) {
         console.log(error);
         req.error = error;
@@ -72,7 +72,7 @@ router.post('/', async (req,res, next) => {
 router.delete('/:id', async (req,res, next) => {
     try{
         const deletedMeme = await db.Meme.findByIdAndDelete(req.params.id);
-        res.redirect('/meme/');
+        return res.redirect('/meme/');
     }
     catch (error) {
         console.log(error);
