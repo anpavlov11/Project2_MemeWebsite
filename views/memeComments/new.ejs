@@ -17,11 +17,9 @@
         </label><br/>
         <label>
             Choose Meme to Comment on:
-            <select name = "meme">
-                <option value = "1">Test Value 1</option>
-                <option value = "2">Test Value 2</option>
-                <option value = "3">Test Value 3</option>
-            </select>
+            <% for (let i = 0; i < memes.length; i++) { %>
+                <p><%=memes[i]._id%></p>
+            <% } %>
         </label><br/>
         <input type = "submit" value = "Create Meme Comment" />
     </form>

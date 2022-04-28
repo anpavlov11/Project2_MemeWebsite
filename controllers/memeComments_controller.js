@@ -24,7 +24,7 @@ router.get('/new', async(req, res, next) => {
         const allMemes = await db.Meme.find({});
         console.log(allMemes);
         const context = {memes: allMemes};
-        return res.render ('comments/new.ejs');
+        return res.render ('memeComments/new.ejs', context);
     } catch (err){
         console.log(error);
         req.error = error;
