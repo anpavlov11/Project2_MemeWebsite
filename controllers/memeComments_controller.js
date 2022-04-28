@@ -15,22 +15,31 @@ const db = require('../Models/');
 
 // Index -GET- route for comments ERD, serves index.ejs template
 router.get('/', async(req, res, next) => {
-    res.send('hitting meme comment index');
+    return res.send('hitting meme comment index');
 });
 
 // New -GET- route for comments ERD, serves new.ejs template
 router.get('/new', async(req, res, next) => {
-    res.render('memeComments/new.ejs');
+    try {
+        const allMemes = await db.Meme.find({});
+        console.log(allMemes);
+        const context = {memes: allMemes};
+        return res.render ('comments/new.ejs');
+    } catch (err){
+        console.log(error);
+        req.error = error;
+        return next();
+    }    
 });
 
 // Create -POST- route for comments ERD
 router.post('/', async(req, res, next) => {
-    res.send(req.body);
+    return res.send(req.body);
 });
 
 // Show route -GET- route for comments ERD, serves show.ejs template
 router.get('/:memeId', async(req, res, next) => {
-    res.render('memeComments/show.ejs');
+    return res.render('memeComments/show.ejs');
 });
 
 // Update route -PUT- route for comments ERD
