@@ -52,8 +52,8 @@ router.get('/:id/edit', (req,res) => {
 router.post('/', async (req,res, next) => {
     try {
         console.log(req.body);
-        const createMeme = await db.Meme.create(req.body);
-        console.log(`created meme: ${createMeme}`);
+        const createdMeme = await db.Meme.create(req.body);
+        console.log(`created meme: ${createdMeme}`);
         res.redirect('/meme/');
     } catch (error) {
         console.log(error);
