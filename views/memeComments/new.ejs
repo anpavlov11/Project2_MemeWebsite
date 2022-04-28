@@ -6,6 +6,15 @@
     <!-- navigation -->
     <%- include('../partials/nav.ejs') %>
     <h1>New Meme Comment Page</h1>
-    
+    <form>
+        <input type = "number" name = "rating" />
+        <input type = "string" name = "content" />
+        <!-- select meme to comment on -->
+        <select name = "meme">
+            <option value = "1">Test Value 1</option>
+            <option value = "2">Test Value 2</option>
+            <option value = "3">Test Value 3</option>
+        </select>
+    </form>
 </body>
 </html>
