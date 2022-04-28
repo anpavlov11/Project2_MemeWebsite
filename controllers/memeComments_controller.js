@@ -30,7 +30,7 @@ router.post('/', async(req, res, next) => {
 
 // Show route -GET- route for comments ERD, serves show.ejs template
 router.get('/:memeId', async(req, res, next) => {
-    res.send('hitting meme comment show ' +req.params.memeId);
+    res.render('memeComments/show.ejs');
 });
 
 // Update route -PUT- route for comments ERD
