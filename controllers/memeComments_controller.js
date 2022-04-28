@@ -59,7 +59,7 @@ router.post('/', async(req, res, next) => {
 router.get('/:memeId', async(req, res, next) => {
     try{
         const foundMemeComment = await db.MemeComment.findById(req.params.memeId).populate('meme');
-        res.send(foundMemeComment);
+        return res.render('memeComments/show.ejs', {memeComment: foundMemeComment});
     }
     catch (error){
         console.log(error);
