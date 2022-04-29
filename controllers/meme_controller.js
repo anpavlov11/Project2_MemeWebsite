@@ -76,6 +76,7 @@ router.post('/', async (req,res, next) => {
 router.delete('/:id', async (req,res, next) => {
     try{
         const deletedMeme = await db.Meme.findByIdAndDelete(req.params.id);
+        const deletedMemeComments = await db.MemeComment.deleteMany({meme: req.params.id});
         return res.redirect('/meme/');
     }
     catch (error) {
