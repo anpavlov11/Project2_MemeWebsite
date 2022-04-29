@@ -4,24 +4,26 @@
     <%- include('partials/head.ejs') %>
 <body>
     <h1>Meme Index Page</h1>
-    <ul>
-        <li><a href = "/">Back to We Meme it Homepage</a></li>
-        <li><a href = "/meme/new"> New Meme</a></li>
-    </ul>
-    <div class = "flex-container">
-        <% for(let i = 0; i < memes.length; i++){ %>
-            <div class = "flex-item">
-                <a href="/meme/<%= memes[i]._id %>"><%=memes[i].title%></a></br>
-                <img class = "homeImage" src="<%=memes[i].image%>" alt="<%=memes[i].title%>"/>
-                <p><%=memes[i].description%></p>
-                    <div>
-                        <form method="POST" action="/meme/<%= memes[i]._id %>?_method=Delete">
-                            <input type="submit" value = "Delete Meme" />
-                        </form>
-                    </div>
-            </div>
-        <% } %>
-    </div>
+    <nav>
+        <ul>
+            <li><a href = "/">Back to We Meme it Homepage</a></li>
+            <li><a href = "/meme/new"> New Meme</a></li>
+        </ul>
+    </nav>
+        <div class = "flex-container">
+            <% for(let i = 0; i < memes.length; i++){ %>
+                <div class = "flex-item">
+                    <a href="/meme/<%= memes[i]._id %>"><%=memes[i].title%></a></br>
+                    <img class = "homeImage" src="<%=memes[i].image%>" alt="<%=memes[i].title%>"/>
+                    <p><%=memes[i].description%></p>
+                        <div>
+                            <form method="POST" action="/meme/<%= memes[i]._id %>?_method=Delete">
+                                <input type="submit" value = "Delete Meme" />
+                            </form>
+                        </div>
+                </div>
+            <% } %>
+        </div>
     <br>
 </body>
 </html>
