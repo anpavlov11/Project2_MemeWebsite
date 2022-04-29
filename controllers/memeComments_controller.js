@@ -46,7 +46,7 @@ router.post('/', async(req, res, next) => {
         const newMemeCommentData = req.body;
         const newMemeComment = await db.MemeComment.create(newMemeCommentData);
         console.log(newMemeComment);
-        return res.redirect('/comments/');
+        return res.redirect(`/meme/${newMemeComment.meme}`);
     } 
     catch (error) {
         console.log(error);
