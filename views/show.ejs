@@ -14,6 +14,15 @@
     <p><%= oneMeme.description %></p>
     <section>
         <h2>Meme Comments</h2>
+        <div>
+            <h3>Create a Meme Comment</h3>
+            <form>
+                <input name = "rating" type = "number"/>
+                <input name = "content" type = "text"/>
+                <input type = "text" value = "<%=oneMeme.id%>"/>
+                <input type = "submit" value = "Submit Meme Comment!"/>
+            </form>
+        </div>
         <% for (let i = 0; i<memeComments.length; i++) { %>
             <div>
                 <h3>Rating: <%= memeComments[i].rating %></h3>
