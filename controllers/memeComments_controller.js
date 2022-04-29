@@ -30,7 +30,6 @@ router.get('/', async(req, res, next) => {
 router.get('/new', async(req, res, next) => {
     try {
         const allMemes = await db.Meme.find({});
-        console.log(allMemes);
         const context = {memes: allMemes};
         return res.render ('memeComments/new.ejs', context);
     } catch (err){
@@ -45,7 +44,6 @@ router.post('/', async(req, res, next) => {
     try {
         const newMemeCommentData = req.body;
         const newMemeComment = await db.MemeComment.create(newMemeCommentData);
-        console.log(newMemeComment);
         return res.redirect(`/meme/${newMemeComment.meme}`);
     } 
     catch (error) {
