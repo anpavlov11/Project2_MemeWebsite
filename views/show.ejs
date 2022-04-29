@@ -17,8 +17,14 @@
         <div>
             <h3>Create a Meme Comment</h3>
             <form method = "POST" action = "/comments/">
-                <input name = "rating" type = "number"/>
-                <input name = "content" type = "text"/>
+                <label>
+                    Rating (Number 1-5, 5 being the best): 
+                    <input name = "rating" type = "number"/>
+                </label><br/>
+                <label>
+                    Meme Comment:
+                    <input name = "content" type = "text"/>
+                </label><br/>
                 <input type = "hidden" name = "meme" value = "<%=oneMeme.id%>"/>
                 <input type = "submit" value = "Submit Meme Comment!"/>
             </form>
