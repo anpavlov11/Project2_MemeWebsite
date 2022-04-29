@@ -12,5 +12,29 @@
     <h2><%= oneMeme.title %></h2>
     <img class = 'showImage' src = '<%=oneMeme.image%>' alt = '<%=oneMeme.title%>'/>
     <p><%= oneMeme.description %></p>
+    <section>
+        <h2>Meme Comments</h2>
+        <div>
+            <h3>Create a Meme Comment</h3>
+            <form method = "POST" action = "/comments/">
+                <label>
+                    Rating (Number 1-5, 5 being the best): 
+                    <input name = "rating" type = "number"/>
+                </label><br/>
+                <label>
+                    Meme Comment:
+                    <input name = "content" type = "text"/>
+                </label><br/>
+                <input type = "hidden" name = "meme" value = "<%=oneMeme.id%>"/>
+                <input type = "submit" value = "Submit Meme Comment!"/>
+            </form>
+        </div>
+        <% for (let i = 0; i<memeComments.length; i++) { %>
+            <div>
+                <h3>Rating: <%= memeComments[i].rating %></h3>
+                <p><%= memeComments[i].content %></p>
+            </div>
+        <% } %>
+    </section>
 </body>
 </html>

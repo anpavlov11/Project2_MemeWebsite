@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- include partial head.ejs here -->
+    <%- include('../partials/head.ejs') %>
+<body>
+    <!-- navigation -->
+    <%- include('../partials/nav.ejs') %>
+    <h1>New Meme Comment Page</h1>
+    <form action = "/comments/" method = "POST">
+        <label>
+            Rating (Number 1-5, 5 being the best): 
+            <input type = "number" name = "rating" />
+        </label><br/>
+        <label>
+            Meme Comment:
+            <input type = "string" name = "content" />
+        </label><br/>
+        <label>
+            Choose Meme to Comment on:
+            <select name = "meme">
+                <% for (let i = 0; i < memes.length; i++) { %>
+                    <option value = "<%=memes[i]._id%>"><%= memes[i].title %></option>
+                <% } %>
+            </select>
+        </label><br/>
+        <input type = "submit" value = "Create Meme Comment" />
+    </form>
+</body>
+</html>

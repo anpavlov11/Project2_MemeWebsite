@@ -31,7 +31,11 @@ router.get('/new', (req, res) => {
 router.get('/:id', async (req, res, next) =>{
     try{
         const foundMeme = await db.Meme.findById(req.params.id);
-        const context = {oneMeme: foundMeme};
+        const allMemeComments = await db.MemeComment.find({meme: req.params.id})
+        const context = {
+            oneMeme: foundMeme,
+            memeComments: allMemeComments
+        };
         return res.render('show.ejs', context );
     } catch (error) {
         console.log(error);
@@ -72,6 +76,7 @@ router.post('/', async (req,res, next) => {
 router.delete('/:id', async (req,res, next) => {
     try{
         const deletedMeme = await db.Meme.findByIdAndDelete(req.params.id);
+        const deletedMemeComments = await db.MemeComment.deleteMany({meme: req.params.id});
         return res.redirect('/meme/');
     }
     catch (error) {
