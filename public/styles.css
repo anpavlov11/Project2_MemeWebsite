@@ -1,11 +1,19 @@
 /* Meme home body style */
-body {
-    background-color: lightblue;
+html {
+    background-image: url("https://i.imgur.com/BPhaZI8.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul {
+    list-style: none;
 }
 
 /* home meme image style */
 .homeImage{
-    height: 300px;
+    height: 400px;
     width: 300px;
 }
 
@@ -13,4 +21,33 @@ body {
 .showImage{
     height: 500px;
     width: 500px;
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+}
+
+/* .flex-container {
+    display: flex;
+    flex-direction: row;
+}*/
+
+.flex-item {
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    font-size: 16px;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0px;
+}
+
+input {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
 }
