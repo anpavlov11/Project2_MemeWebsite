@@ -1,3 +1,6 @@
-body {
-    background-color: lightgreen;
+html {
+    background-image: url("https://i.imgur.com/BPhaZI8.png");
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
