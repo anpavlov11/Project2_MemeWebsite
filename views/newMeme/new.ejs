@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Meme</title>
+    <link rel="stylesheet" href="/newMeme.css"/>
+    <!-- linking jQuery files -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script src = "/scripts/main.js" defer></script>
+</head>
+<body>
+    <a href = "/">We Meme It Home Page</a>
+    <!-- Adapted from meme generator based off of decode example: https://www.youtube.com/watch?v=io5FcMAdLyQ -->
+    <h1>Generate New Meme</h1>
+    <div class = "meme_generator">
+        <label> Input Custom Image URL and Click Enter</label>
+        <input type = "text" id = "imageURL"/>
+        <label> Top Text </label>
+        <input type = "text" id = "topTextInput"/>
+        <label> Bottom Text </label>
+        <input type = "text" id = "bottomTextInput"/>
+        <input type = "submit" id = "generate_meme_button" value="Generate Meme!!"/> 
+        <div>
+            <label for = "image">New Meme </label>
+            <canvas id ="meme"></canvas>
+        </div>
+    </div>
+</body>
+</html>
