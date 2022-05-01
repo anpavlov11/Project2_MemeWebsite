@@ -17,6 +17,16 @@ If the user choses to interact with the meme index via the link on the homepage,
 
 If the user would like to add the meme from the internet, he or she can do so by clicking on the "add new meme" link at the top of the meme index page. In the new meme page, the user can copy and paste a URL of his or her favorite online meme image into the URL input. The user must add a title for the meme and a description. The user can then submit the new, funny meme to the meme database and it will show up on the meme index page for other users to see!
 
+Screenshots of Website Flow:
+
+Home screen:
+![homepage_screenshow text](./SiteScreenshots/homepage_screenshot.png)
+
+This is the We Meme It homepage where you can go to either the main meme index page to interact with all of the memes in the database or go to generate your own custom meme via links at the top!
+
+
+
+
 Future features and directions:
 
 We hope to be able to enable the addition of generated memes to the meme index in the future, however conversion of the canvas object to an image object remains to be a challenge. We also hope to implement meme discussions/stories in the future where users can add to discussions using memes only! Other features and activities are being considered for future iterations as well!
