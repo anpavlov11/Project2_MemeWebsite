@@ -41,6 +41,14 @@ New Meme Page:
 
 This is where users can contribute to our meme database by added funny new memes they have found on the internet! Users can copy and paste the url of the image into the Meme Image(url) field, add a Title, and a brief description of the meme below. Click on the Submit New Meme button to add the funny new meme to our ever growing database!
 
+Meme Show PAge: 
+
+![meme_show_page text](./SiteScreenshots/meme_show_page.png)
+
+The meme show page shows the descriptions, titles and comments associated with the chosen meme. Users can click on the edit meme link to change specific aspects about the meme (described more in detail below). Below the funny meme, users can see the description and add to the list of comments and ratings of the meme. A rating of 5 means a meme is extremely funny, a rating of 1 means the meme is not so funny. A rating in between those two means the meme is sort of funny more or less. Let other users know your thoughts on the meme!
+
+
+
 
 
 Future features and directions:
