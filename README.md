@@ -24,6 +24,12 @@ Home screen:
 
 This is the We Meme It homepage where you can go to either the main meme index page to interact with all of the memes in the database or go to generate your own custom meme via links at the top!
 
+Generate a Meme Page:
+![meme_generator_screenshot text](./SiteScreenshots/meme_generator_screenshot.png)
+
+This is the We Meme It meme generator page where you can generate your own memes! Chose a funny image, copy and paste in the image address, add some funny text to the top and bottom and generate your new meme!
+
+
 
 
 
