@@ -11,7 +11,7 @@ const controllers = require('./controllers/');
 // require mongo db connection 
 require('./config/db.connection');
 // set up port variable
-PORT = 4000;
+PORT = process.env.PORT;
 
 ///////////////////MIDDLEWARE////////////////////////////
 
