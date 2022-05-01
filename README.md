@@ -29,7 +29,17 @@ Generate a Meme Page:
 
 This is the We Meme It meme generator page where you can generate your own memes! Chose a funny image, copy and paste in the image address, add some funny text to the top and bottom and generate your new meme!
 
+Meme Index Page:
 
+![meme_index_page text](./SiteScreenshots/meme_index_page.png)
+
+This is the main index page of the memes in the We Meme It database! Peruse the funny memes, titles and descriptions. If you find a funny Meme online that needs to be in our database, go to our "add new meme" page via the link above to do so. To get more information about a particular meme, click on the title of the meme (the link to the upper left) to see each meme's show page with further descriptions of the meme. You can delete memes from the index too, but becareful because deleting a meme from the index deletes that meme permanently from our database of memes as well! Look at all of the fun memes!!
+
+New Meme Page:
+
+![new_meme_page text](./SiteScreenshots/new_meme_page.png)
+
+This is where users can contribute to our meme database by added funny new memes they have found on the internet! Users can copy and paste the url of the image into the Meme Image(url) field, add a Title, and a brief description of the meme below. Click on the Submit New Meme button to add the funny new meme to our ever growing database!
 
 
 
