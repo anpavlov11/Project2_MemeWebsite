@@ -35,6 +35,7 @@ li a {
 
 li a:hover {
     background-color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px black;
 }
 
 /* home meme image style */
@@ -42,7 +43,8 @@ li a:hover {
     display: flex;
     flex-wrap: wrap;
     height: 40vh;
-    flex-grow: 3;
+    align-items: flex-start;
+    margin:1vw 1%;
     height: 300px;
     width: 200px;
     
@@ -56,7 +58,10 @@ li a:hover {
 
 .flex-container {
     display: flex;
-    flex-wrap: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    justify-content: center;
 }
 
 .flex-item {
@@ -64,11 +69,15 @@ li a:hover {
 }
 
 a {
+    color: whitesmoke;
+    -webkit-text-stroke: .1px black;
     text-shadow: 2px 2px 4px rgb(255, 82, 197);
 }
 
 p {
     font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+    -webkit-text-stroke: .1px black;
     text-shadow: 2px 2px 4px rgb(96, 255, 244);
     padding: 5px;
 }
