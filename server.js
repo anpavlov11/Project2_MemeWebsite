@@ -11,7 +11,7 @@ const controllers = require('./controllers/');
 // require mongo db connection 
 require('./config/db.connection');
 // set up port variable
-PORT = 4000;
+PORT = process.env.PORT;
 
 ///////////////////MIDDLEWARE////////////////////////////
 
@@ -29,6 +29,7 @@ app.set('view engine', 'ejs');
 // meme controller middleware
 app.use('/meme/', controllers.memes);
 app.use('/comments/', controllers.memeComments);
+app.use('/newmeme/', controllers.newMeme);
 
 /////////////////////// ROUTES //////////////////////////
 
