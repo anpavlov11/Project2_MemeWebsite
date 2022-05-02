@@ -1,7 +1,12 @@
 /* generate new meme page styles */
 
 body {
-    background-color: lightgoldenrodyellow;
+    background-image: url("https://i.imgur.com/BPhaZI8.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+    -webkit-text-stroke: 1px black;
 }
 
 .meme_generator {
