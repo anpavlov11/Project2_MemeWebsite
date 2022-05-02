@@ -54,6 +54,10 @@ li a:hover {
     flex-wrap: row;
 }
 
+.flex-item {
+    padding: 20px;
+}
+
 a {
     text-shadow: 2px 2px 4px rgb(255, 82, 197);
 }
