@@ -86,3 +86,11 @@ input {
     font-family: 'Courier New', Courier, monospace;
     padding: 10px;
 }
+
+label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: rgb(250, 247, 247);
+    -webkit-text-stroke: .1px black;
+    text-shadow: 2px 2px 4px rgb(74, 0, 123);
+}
