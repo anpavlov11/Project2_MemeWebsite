@@ -13,6 +13,7 @@ h1 {
 }
 
 ul {
+    font-family: 'Courier New', Courier, monospace;
     text-align: left;
     background-color: rgb(50, 50, 50, .5);
     list-style-type: none;
