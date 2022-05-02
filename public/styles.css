@@ -2,8 +2,7 @@
 html {
     background-image: url("https://i.imgur.com/BPhaZI8.png");
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -45,8 +44,7 @@ li a:hover {
     height: 40vh;
     align-items: flex-start;
     margin:1vw 1%;
-    height: 300px;
-    width: 200px;
+    size: 30%;
     
 }
 
@@ -65,7 +63,7 @@ li a:hover {
 }
 
 .flex-item {
-    padding: 20px;
+    padding: 4px;
 }
 
 a {
