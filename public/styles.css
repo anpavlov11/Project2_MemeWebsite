@@ -7,10 +7,34 @@ html {
     font-family: 'Courier New', Courier, monospace;
 }
 
-li {
-    background-color: rgba(154, 154, 154, 0.7);
+h1 {
     text-align: center;
-    list-style: none;
+    text-shadow: 2px 2px 4px greenyellow;
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+    font-size: 50px;
+}
+
+ul {
+    display: block;
+    text-align: left;
+    background-color: rgb(50, 50, 50, .5);
+    list-style-type: none;
+    overflow: hidden;
+    float: left;
+    padding: 10px;
+}
+      
+li a {
+    color: white;
+    text-shadow: 2px 2px 4px rgb(255, 56, 192);
+    text-align: left;
+    text-decoration: none;
+    margin: 10px;
+}
+
+li a:hover {
+    background-color: rgb(255, 255, 255);
 }
 
 /* home meme image style */
@@ -25,28 +49,19 @@ li {
     width: 500px;
 }
 
-div {
+.flex-container {
     display: flex;
-    flex-direction: row;
-}
-
-/* .flex-container {
-    display: flex;
-    flex-direction: row;
-}*/
-
-.flex-item {
-    display: flex;
-    flex-direction: row;
+    flex-wrap: row;
 }
 
 a {
-    font-size: 16px;
+    text-shadow: 2px 2px 4px rgb(255, 82, 197);
 }
 
 p {
     font-family: 'Courier New', Courier, monospace;
-    padding: 0px;
+    text-shadow: 2px 2px 4px rgb(96, 255, 244);
+    padding: 5px;
 }
 
 input {
